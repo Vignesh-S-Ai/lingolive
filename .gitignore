@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.vercel/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+.env.txt
+backend/.env.txt
+backend/database/*.db
+*.log
+.DS_Store

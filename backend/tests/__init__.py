@@ -1,0 +1,1 @@
+"""Tests package for the real-time multilingual translator."""

@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: lingolive-api
+    runtime: python
+    plan: standard
+    rootDir: backend
+    buildCommand: >-
+      pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements.txt
+      && python -c "import torch;
+      from transformers import AutoTokenizer, AutoModelForSeq2SeqLM;
+      AutoTokenizer.from_pretrained('facebook/nllb-200-distilled-600M');
+      AutoModelForSeq2SeqLM.from_pretrained('facebook/nllb-200-distilled-600M', torch_dtype=torch.float16, low_cpu_mem_usage=True)"
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    envVars:
+      - key: GNANI_API_KEY
+        sync: false
+      - key: LIVEKIT_URL
+        sync: false
+      - key: LIVEKIT_API_KEY
+        sync: false
+      - key: LIVEKIT_API_SECRET
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
