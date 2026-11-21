@@ -524,9 +524,8 @@ export default function LiveConversationRoom() {
     navigate('/', { replace: true })
   }
 
-  /* --- dev/test handle: lets CDP browser tests assert live state --- */
+  /* --- test handle: lets CDP browser tests assert live state --- */
   React.useEffect(() => {
-    if (!import.meta.env.DEV) return
     const w = window as unknown as { __roomDebug?: unknown }
     w.__roomDebug = {
       transcripts: () => useConversationStore.getState().transcripts,
