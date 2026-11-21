@@ -12,3 +12,6 @@ backend/.env.txt
 backend/database/*.db
 *.log
 .DS_Store
+cloudflared.exe
+tunnel-raw.log
+tunnel-url.txt
