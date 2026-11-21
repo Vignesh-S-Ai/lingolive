@@ -58,7 +58,7 @@ export function Logo({ size = 'md', showWordmark = true, className }: LogoProps)
             wordSizes[size]
           )}
         >
-          Vign<span className="text-primary-bright">Trans</span>
+          Lingo<span className="text-primary-bright">Live</span>
         </span>
       )}
     </span>

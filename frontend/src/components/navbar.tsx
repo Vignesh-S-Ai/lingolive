@@ -40,7 +40,7 @@ export function Navbar() {
         <Link to="/" className="flex items-center gap-2.5 rounded-md" aria-label="LingoLive home">
           <LogoMark size="sm" />
           <span className="font-display text-[16px] font-extrabold tracking-[-0.03em]">
-            Vign<span className="text-primary-bright">Trans</span>
+            Lingo<span className="text-primary-bright">Live</span>
           </span>
         </Link>
 
